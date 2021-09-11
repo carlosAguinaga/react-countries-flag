@@ -1,6 +1,6 @@
 
 .home-container {
-    background-color: aquamarine;
+    background-color: #c0e9f0;
     overflow: scroll;
     display: grid;
     grid-template-columns: 1fr;

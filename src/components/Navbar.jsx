@@ -8,10 +8,10 @@ const Navbar = () => {
   return (
     <nav>
       <NavLink to="/" activeClassName="nav-selected" exact>
-        Home
+        HOME
       </NavLink>
       <NavLink to="/search" activeClassName="nav-selected" exact>
-        Search
+        SEARCH
       </NavLink>
     </nav>
   );

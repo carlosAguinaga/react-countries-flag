@@ -10,7 +10,7 @@ const Flag = ({name, img}) => {
         <div className="flag-container">
             <img src={img} alt={name} />
             <h2>{name}</h2>
-            <button onClick={()=> history.push(`/detail/${name}`) }>ver detale</button>
+            <button onClick={()=> history.push(`/detail/${name}`) }>Ver detalle</button>
         </div>
     )
 }

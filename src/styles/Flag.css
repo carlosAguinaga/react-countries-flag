@@ -11,6 +11,13 @@
 }
 .flag-container button {
   width: 100%;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #4187e2;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 @media (min-width: 600px) {
@@ -21,7 +28,7 @@
   }
 }
 
-@media (min-width: 100px) {
+@media (min-width: 1000px) {
   .flag-container {
     max-width: 350px;
   }
