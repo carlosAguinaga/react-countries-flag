@@ -1,0 +1,28 @@
+.flag-container {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.flag-container img {
+  width: 100%;
+  object-fit: cover;
+}
+.flag-container button {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+
+  .flag-container img {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 100px) {
+  .flag-container {
+    max-width: 350px;
+  }
+}
