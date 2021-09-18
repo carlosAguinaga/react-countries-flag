@@ -15,7 +15,8 @@ const Search = () => {
           onChange={(e) => setCountry(e.target.value)}
         />
         <button type="submit"
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault()
             history.push(`/detail/${country}`);
           }}
         >

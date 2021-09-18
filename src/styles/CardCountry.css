@@ -1,0 +1,27 @@
+.card-country {
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .flag-img {
+    width: 100%;
+  }
+  
+  .card-detail .deatail-description {
+    padding: 20px;
+  }
+  .card-detail .deatail-description .title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .card-detail .deatail-description h3 {
+    font-weight: bold;
+  }
+  .card-detail .deatail-description h3 span {
+    font-weight: 400;
+  }

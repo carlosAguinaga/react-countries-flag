@@ -1,6 +1,15 @@
 
+.home-section {
+
+}
+
+.home-section .title-home {
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 35px;
+} 
+
 .home-container {
-    background-color: #c0e9f0;
     overflow: scroll;
     display: grid;
     grid-template-columns: 1fr;
