@@ -1,9 +1,44 @@
 .card-weather-container {
     width: 100%;
-    padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 30px;
+    max-width: 500px;
 }
 
-.wheather-title {
-    background-color: blueviolet;
+.card-weather-container .wheather-title {
+    background-color: #4187e2;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
 }
+
+.weather-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.weather-description >img {
+    width: 40%;
+}
+
+.weather-description {
+    padding: 10px;
+}
+
+.temp-container{
+    border: solid 3px #4187e2;
+    border-radius: 20px;
+    padding: 20px;
+    width: max-content;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.temp-container h2{
+    font-size: 40px;
+}
+

@@ -35,7 +35,9 @@ const Detail = () => {
     <div className="detail-container container">
       {!country && <h2>Espere...</h2>}
       {country && country.status === 404 && <h2>el país no existe</h2>}
-      {country && country.status !== 404 && <CardCountry country={country} />}
+      {country && country.status !== 404 && (
+        <CardCountry country={country[0]} />
+      )}
       {dataWeather && dataWeather.cod === 200 && (
         <CardWeather data={dataWeather} />
       )}
