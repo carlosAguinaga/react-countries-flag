@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/CardWeather.css";
 
 const CardWeather = ({ data }) => {
-  console.log(data);
+  
   return (
     <div className="card-weather-container">
       <h2 className="wheather-title">Current Weather</h2>

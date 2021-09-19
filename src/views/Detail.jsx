@@ -15,12 +15,16 @@ const Detail = () => {
     try {
       const res = await fetch(`https://restcountries.eu/rest/v2/name/${id}`);
       const dataCountry = await res.json();
-      const resWeather = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${dataCountry[0].capital}&appid=${api_key}&units=metric&lang=es`
-      );
-      const dataWeather = await resWeather.json();
       setCountry(dataCountry);
-      setDataWeather(dataWeather);
+      if (dataCountry.status !== 400) {
+        const resWeather = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?q=${dataCountry[0].capital}&appid=${api_key}&units=metric&lang=es`
+        );
+        const dataWeather = await resWeather.json();
+        setDataWeather(dataWeather);
+      }
+
+      
     } catch (e) {
       console.log(e);
     }
