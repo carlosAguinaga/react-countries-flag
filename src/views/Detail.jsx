@@ -13,18 +13,16 @@ const Detail = () => {
 
   const getDataCountry = async () => {
     try {
-      const res = await fetch(`https://restcountries.eu/rest/v2/name/${id}`);
+      const res = await fetch(`https://restcountries.com/v3/name/${id}`);
       const dataCountry = await res.json();
       setCountry(dataCountry);
-      if (dataCountry.status !== 400) {
+      if (dataCountry.status !== 404) {
         const resWeather = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?q=${dataCountry[0].capital}&appid=${api_key}&units=metric&lang=es`
         );
         const dataWeather = await resWeather.json();
         setDataWeather(dataWeather);
       }
-
-      
     } catch (e) {
       console.log(e);
     }
@@ -32,7 +30,8 @@ const Detail = () => {
 
   useEffect(() => {
     getDataCountry();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -41,6 +40,7 @@ const Detail = () => {
       {country && country.status === 404 && <h2>el país no existe</h2>}
       {country && country.status !== 404 && (
         <CardCountry country={country[0]} />
+
       )}
       {dataWeather && dataWeather.cod === 200 && (
         <CardWeather data={dataWeather} />

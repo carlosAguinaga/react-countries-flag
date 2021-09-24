@@ -6,8 +6,8 @@ import "../styles/Home.css";
 const Home = () => {
   const [numIntems, setNumIntems] = useState(20);
 
-  const { data } = useFetchData("https://restcountries.eu/rest/v2/all");
-
+  const { data } = useFetchData("https://restcountries.com/v3/all");
+  
   const myRef = useRef();
   useLayoutEffect(() => {
     const handleScroll = () => {
@@ -34,7 +34,7 @@ const Home = () => {
         {data &&
           data
             .slice(0, numIntems)
-            .map((el) => <Flag name={el.name} img={el.flag} key={el.name} />)}
+            .map((el, index) => <Flag name={el.name.common} img={el.flags[0]} key={index} />)}
       </div>
     </div>
   );
